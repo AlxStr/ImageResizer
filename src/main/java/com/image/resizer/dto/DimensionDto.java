@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @Builder
 public class DimensionDto {
-    public int height;
-    public int width;
+    private int height;
+    private int width;
 }
