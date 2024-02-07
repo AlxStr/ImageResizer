@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      dockerfile: docker/Dockerfile
+    environment:
+      APP_STORAGE_BUCKET: bucket
+      APP_STORAGE_ROOT_FOLDER: uploads
+      APP_SERVLET_MULTIPART_FILE_SIZE: 5MB
+      APP_SERVLET_MAX_REQUEST_SIZE: 5MB
+      GOOGLE_APPLICATION_CREDENTIALS: /app/resources/credentials/google-cloud.json
+    ports:
+      - "8080:8080"
